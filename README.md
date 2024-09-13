@@ -1,7 +1,15 @@
 # MQTT broker with producer/consumer client
 
-mqtt example. mqtt only holds the last message to a given topic so if clients are offline for an extended period, 
-they will likely lose messages.
+MQTT example. 
+* The broker is MQTT and runs in a container (using docker-compose).  
+* The client application contains a producer and multiple consumers  
+  * Permanent (consuming all the time)
+  * Delayed (Consumes after the producer has finished plus a short delay)
+* The client application sends 5 messages to a topic `<lang>/mqtt`  
+  * the messages are sent with the retain flag set true (`retain=True`)
+
+NOTE: **mqtt only holds the last message to a given topic so if clients are offline for an extended period, 
+they will likely lose messages.**
 
 ## python output
 
