@@ -13,6 +13,8 @@ they will likely lose messages.**
 
 ## python output
 
+NOTE: when installing the paho-mqtt package, make sure to use `paho-mqtt<2.0`. 2.0 and up made changes that dont work with this client code in this example.
+
 ```text
 Cleared retained messages on topic `python/mqtt`
 Connected to MQTT Broker with client ID: client-642!
